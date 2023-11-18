@@ -23,9 +23,10 @@ Multiple operations supported.
    - [x] Grid
  
 ### PMVP (Post Minimum Viable Product)
-Add feature to allow keyboard presses
-Add feature to allow animation on calculator
-Update design and decorate calculator
+
+- Add feature to allow keyboard presses.
+- Add feature to allow animation on calculator.
+- Update design and decorate calculator.
  
 ## Installation
  
