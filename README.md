@@ -9,7 +9,7 @@ This is a project I'm building in the Nebula Academy SEV12 Program. This calcula
 
  
 ## Features
-Multiple operations suppoorted.
+Multiple operations supported.
  
 ### MVP (Minimum Viable Product)
  
