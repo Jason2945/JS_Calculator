@@ -1,0 +1,134 @@
+body {
+    cursor: url(sun.svg) 24 27, auto;
+    background-color: pink;
+    background-image: url(img/htmlBackground.jpg);
+    background-size: 100%;
+}
+
+html{
+    cursor: url(img/sun.svg) 24 27, auto;
+}
+
+.displayScreen{
+    display: grid;
+    margin: auto;
+    width: 340px;
+    height: 150px;
+}
+
+.screen{
+    cursor: url(img/sun.svg) 24 27, auto;
+    background-color: transparent;
+    border: 0px;
+    text-align: center;
+    font-size: 20px;
+    color: aquamarine;
+}
+
+.calculatorButtons{
+    cursor: url(img/sun.svg) 24 27, auto;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5, 50px);
+    grid-template-areas: 
+        "clear divide multiply subtract"
+        "num7 num8 num9 add"
+        "num4 num5 num6 add"
+        "num1 num2 num3 equal"
+        "num0 num0 decimal equal";
+    margin-top: 100px;
+    row-gap: 15px;
+    column-gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+}
+
+button {
+    cursor: url(img/sun.svg) 24 27, auto;
+    background-color: transparent;
+    color: darkmagenta;
+    font-style: bold, italic;
+    font-size: 25px;
+}
+
+.clear {
+    grid-area: clear;
+    background-color: transparent;
+    font-style: italic;
+}
+
+.calculatorButtons :hover{
+    background-color: rgb(198, 253, 0);
+}
+
+.calculatorButtons :active{
+    background-color: yellow;
+}
+
+
+.divide {
+    grid-area: divide;
+}
+
+.multiply {
+    grid-area: multiply;
+
+}
+
+.subtract {
+    grid-area: subtract;
+}
+
+.num7 {
+    grid-area: num7;
+}
+
+.num8 {
+    grid-area: num8;
+}
+
+.num9 {
+    grid-area: num9;
+}
+
+.add {
+    grid-area: add;
+}
+
+.num4 {
+    grid-area: num4;
+}
+
+.num5 {
+    grid-area: num5;
+}
+
+.num6 {
+    grid-area: num6;
+}
+
+.num1{
+    grid-area: num1;
+}
+
+.num2{
+    grid-area: num2;
+}
+
+.num3{
+    grid-area: num3;
+}
+
+.num0 {
+    grid-area: num0;
+}
+
+.decimal {
+    grid-area: decimal;
+}
+
+.equal {
+    grid-area: equal;
+}
