@@ -27,6 +27,7 @@ Multiple operations supported.
 - Update design and decorate calculator.
 - Add animation to button clicks
 - Update cursor
+- Add sound function when equation is solved.
  
 ## Installation
  
