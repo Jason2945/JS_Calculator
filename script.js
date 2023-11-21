@@ -14,6 +14,8 @@ let allButtons = document.getElementsByClassName('calculatorButtons')[0].getElem
 
 let answer = ""
 
+let ding = new Audio("img/ding.mp3")
+
 //Run a for loop to check if any of the button is pressed
 for (let index = 0; index < allButtons.length; index++){
     allButtons[index].addEventListener("click", function(){
@@ -95,6 +97,7 @@ function buttonPressed(classValue){
                 break;
             }else {
                 currentChar = '=';
+                ding.play()
                 answer = convertToArray(screenText)
                 break;
             } 
