@@ -28,6 +28,9 @@ Multiple operations supported.
 - [x] Add animation to button clicks
 - [x] Update cursor
 - [x] Add sound function when equation is solved.
+- [ ] Add idle animation
+- [ ] Add keyboard button trigger to calculator
+- [ ] Add Button to delete last char inputted
  
 ## Installation
  
