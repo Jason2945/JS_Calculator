@@ -24,9 +24,9 @@ Multiple operations supported.
  
 ### PMVP (Post Minimum Viable Product)
 
-- Add feature to allow keyboard presses.
-- Add feature to allow animation on calculator.
 - Update design and decorate calculator.
+- Add animation to button clicks
+- Update cursor
  
 ## Installation
  
