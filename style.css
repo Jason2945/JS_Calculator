@@ -2,13 +2,62 @@ html{
     cursor: url(img/sun.svg) 24 27, auto;
 }
 
-body {
+:root{
+    overflow: hidden;
+}
+
+.animations {
+    display: flex;
     cursor: url(img/sun.svg) 24 27, auto;
-    background-color: pink;
+}
+
+.sun {
+    background-image: url(img/sun.svg);
+    background-repeat: no-repeat;
+    object-fit: fill;
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1 /1;
+    animation: 30s linear -3s infinite revolving-sun;
+}
+
+.cloud {
+    background-image: url(img/cloud.svg);
+    background-repeat: no-repeat;
+    object-fit: fill;
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1 /1;
+    animation: 30s linear 0s infinite revolving-sun;
+}
+
+@keyframes revolving-sun {
+    from {
+      transform: translateX(-10vw);
+    }
+    to {
+      transform: translateX(110vw);
+    }
+}
+
+.calculatorBody {
     background-image: url(img/htmlBackground.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+body {
+    cursor: url(img/sun.svg) 24 27, auto;
+    animation: infinite alternate;
+    animation-name: changecolor;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changecolor {
+    from {background-color: lightblue;}
+    to {background-color: grey;}
 }
 
 .displayScreen{
