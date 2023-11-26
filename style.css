@@ -35,8 +35,8 @@ body {
     grid-template-columns: repeat(4, 50px);
     grid-template-rows: repeat(5, 50px);
     grid-template-areas: 
-        "clear divide multiply subtract"
-        "num7 num8 num9 add"
+        "clear divide multiply delete"
+        "num7 num8 num9 subtract"
         "num4 num5 num6 add"
         "num1 num2 num3 equal"
         "num0 num0 decimal equal";
@@ -83,6 +83,10 @@ button {
 
 .subtract {
     grid-area: subtract;
+}
+
+.delete {
+    grid-area: delete;
 }
 
 .num7 {
