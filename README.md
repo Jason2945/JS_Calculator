@@ -25,12 +25,12 @@ Multiple operations supported.
 ### PMVP (Post Minimum Viable Product)
 
 - [x] Update design and decorate calculator.
-- [x] Add animation to button clicks
-- [x] Update cursor
+- [x] Add animation to button clicks.
+- [x] Update cursor.
 - [x] Add sound function when equation is solved.
-- [x] Add idle animation
-- [x] Add keyboard button trigger to calculator
-- [x] Add Button to delete last char inputted
+- [x] Add idle animation.
+- [x] Add keyboard button trigger to calculator.
+- [x] Add Button to delete last char inputted.
  
 ## Installation
  

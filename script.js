@@ -115,9 +115,9 @@ function buttonPressed(classValue){
             break;
         case 'delete':
         case 'Backspace':
-            console.log(screenText)
-            currentChar = "";
             screenText = screenText.slice(0, -1);
+            currentChar = '';
+            break;
         // When equal is pressed, runs the calculateValues function to do math
         case 'equal' :
         case 'Enter' :
@@ -147,7 +147,8 @@ function buttonPressed(classValue){
     }
     // Check to make sure there is an answer. If there is answer, it takes precedence to display
     if (answer !== ""){
-        screenText = answer;
+        // Change answer to string so Type Error doesn't occur.
+        screenText = answer.toString();
         answer = ""
     }
     // Output the screen text to html
