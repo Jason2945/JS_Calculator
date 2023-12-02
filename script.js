@@ -19,20 +19,18 @@ let ding = new Audio("img/ding.mp3")
 // Allow users to enter numbers and operations on keyboard
 currentScreen.addEventListener("keyup", (event =>{
     event.preventDefault();
-    console.log(event);
-    console.log('cancellable', event.cancelable);
     buttonPressed(event.key);
 }));
 
-//Run a for loop to check if any of the button is pressed on the screen
+// Run a for loop to check if any of the button is pressed on the screen
 for (let index = 0; index < allButtons.length; index++){
     allButtons[index].addEventListener("click", function(){
         buttonPressed(allButtons[index]['className'])
     });
 }
 
-//This is used to replace a char at a location to another char
-//Useful for  changing operation signs so user can't input 2 operation signs together
+// This is used to replace a char at a location to another char
+// Useful for  changing operation signs so user can't input 2 operation signs together
 function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
     return str.substring(0,index) + chr + str.substring(index+1);
@@ -181,67 +179,47 @@ function convertToArray(inputtedString){
     return doMath
 }
 
-
 // This function allows the user to do the math function in the array.
 function solveEquation(expression){
     let combinedSum = 0
     while (expression.length > 1){
-
+        // Check both multiplication and division. Do whichever one comes first
         if (expression.includes('*') && expression.includes('/')){
             if (expression.indexOf('*') < expression.indexOf('/')){
                 let indexUsage = expression.indexOf('*')
                 combinedSum = expression[indexUsage - 1] * expression[indexUsage + 1]
                 expression.splice(indexUsage-1, 3, combinedSum)
-                console.log("End Expression", expression)
             }else{
-                console.log("Beginning Expression", expression)
                 let indexUsage = expression.indexOf('/')
                 combinedSum = expression[indexUsage - 1] / expression[indexUsage + 1]
                 expression.splice(indexUsage-1, 3, combinedSum)
-                console.log("End Expression", expression)
             }
-        }
-        else if (expression.includes('*')){
-            console.log("Beginning Expression", expression)
+        }else if (expression.includes('*')){
             let indexUsage = expression.indexOf('*')
             combinedSum = expression[indexUsage - 1] * expression[indexUsage + 1]
             expression.splice(indexUsage-1, 3, combinedSum)
-            console.log("End Expression", expression)
-        }
-        else if (expression.includes('/')){
-            console.log("Beginning Expression", expression)
+        }else if (expression.includes('/')){
             let indexUsage = expression.indexOf('/')
             combinedSum = expression[indexUsage - 1] / expression[indexUsage + 1]
             expression.splice(indexUsage-1, 3, combinedSum)
-            console.log("End Expression", expression)
-        }
-        else if (expression.includes('+') && expression.includes('-')){
+        }else if (expression.includes('+') && expression.includes('-')){
             if (expression.indexOf('+') < expression.indexOf('-')){
                 let indexUsage = expression.indexOf('+')
                 combinedSum = Number(expression[indexUsage - 1]) + Number(expression[indexUsage + 1])
                 expression.splice(indexUsage-1, 3, combinedSum)
-                console.log("End Expression", expression)
             }else{
-                console.log("Beginning Expression", expression)
                 let indexUsage = expression.indexOf('-')
                 combinedSum = Number(expression[indexUsage - 1]) - Number(expression[indexUsage + 1])
                 expression.splice(indexUsage-1, 3, combinedSum)
-                console.log("End Expression", expression)
             }
-        }
-        else if (expression.includes('+')){
-            console.log("Beginning Expression", expression)
+        }else if (expression.includes('+')){
             let indexUsage = expression.indexOf('+')
             combinedSum = Number(expression[indexUsage - 1]) + Number(expression[indexUsage + 1])
             expression.splice(indexUsage-1, 3, combinedSum)
-            console.log("End Expression", expression)
-        }
-        else if (expression.includes('-')){
-            console.log("Beginning Expression", expression)
+        }else if (expression.includes('-')){
             let indexUsage = expression.indexOf('-')
             combinedSum = Number(expression[indexUsage - 1]) - Number(expression[indexUsage + 1])
             expression.splice(indexUsage-1, 3, combinedSum)
-            console.log("End Expression", expression)
         }
     }
     return(combinedSum)
