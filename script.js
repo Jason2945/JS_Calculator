@@ -168,7 +168,7 @@ function decimalError(inputtedString){
 
 // This function is to get the string and convert it to math function
 function convertToArray(inputtedString){
-    // This match function converts the inputted string into an array and seperate it all by the symbol operators
+    // This match function converts the inputted string into an array and separate it all by the symbol operators
     const expression = inputtedString.match(new RegExp(`\\d+(\\.\\d+)?|\\${symbolOperators.join('|\\')}`, 'g'));
     let doMath = 0;
     // Check if the expression is a negative number. If it is add a 0 so error doesn't occur. This also allows negative number to work
@@ -194,14 +194,17 @@ function solveEquation(expression){
                 combinedSum = expression[indexUsage - 1] / expression[indexUsage + 1]
                 expression.splice(indexUsage-1, 3, combinedSum)
             }
+        // Do multiplication if there is only multiplication
         }else if (expression.includes('*')){
             let indexUsage = expression.indexOf('*')
             combinedSum = expression[indexUsage - 1] * expression[indexUsage + 1]
             expression.splice(indexUsage-1, 3, combinedSum)
+        // Do division if there is only division
         }else if (expression.includes('/')){
             let indexUsage = expression.indexOf('/')
             combinedSum = expression[indexUsage - 1] / expression[indexUsage + 1]
             expression.splice(indexUsage-1, 3, combinedSum)
+        // Check addition and subtraction and do whichever comes first
         }else if (expression.includes('+') && expression.includes('-')){
             if (expression.indexOf('+') < expression.indexOf('-')){
                 let indexUsage = expression.indexOf('+')
@@ -212,6 +215,7 @@ function solveEquation(expression){
                 combinedSum = Number(expression[indexUsage - 1]) - Number(expression[indexUsage + 1])
                 expression.splice(indexUsage-1, 3, combinedSum)
             }
+        // Do addition and subtraction
         }else if (expression.includes('+')){
             let indexUsage = expression.indexOf('+')
             combinedSum = Number(expression[indexUsage - 1]) + Number(expression[indexUsage + 1])
