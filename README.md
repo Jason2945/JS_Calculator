@@ -1,6 +1,7 @@
 # Basic Web Calculator
  
-This is a project I'm building in the Nebula Academy SEV12 Program. This calculator will have basic functionality with some 90's styling.
+This is a project I've built in the Nebula Academy SEV12 Program. This calculator will have basic functionality with some styling.
+Currently the code is finished, however a lot of improvements can be made as this project was done when I started learning JS.
  
 ## Wireframe
 ![image](https://github.com/Jason2945/JS_Calculator/assets/86026175/8081d2d6-6c32-445c-ac2f-bdedac595fc8)
@@ -39,6 +40,11 @@ Multiple operations supported.
 ## Usage
  
 Open `index.html`
+
+## Future Plans
+
+- Update animation as it is currently very boring.
+- Work on improving theme design and special features.
  
 ## Contributing
  
